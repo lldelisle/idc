@@ -128,6 +128,20 @@ Front-end implementation that can easily be installed on top of the Refgetstore 
 
 The Refgetstore can be used as basis for comparing reference genomes across different Galaxy instances, as well as to align with source repositories (once their contents are indexed in a GA4GH Refget: sequence collections implementation near you!)
 
+#### Test
+
+I (Lucille) ran it with the test yml with only 2 fastas:
+
+```bash
+$ time python sync/all_fasta_files_to_refget_store.py sync/test.yml sync/refgetstore_test/ &> sync/refgetstore_test.log
+
+real    0m2.880s
+user    0m3.725s
+sys     0m0.512s
+```
+
+The output is available [here](./refgetstore_test/).
+
 ### Generate refget seqcol digest for all FASTA
 
 Highly inspired by the script above, the script `all_fasta_files_to_refget_seqcol_digest.py` takes as input the yaml output of `tool_data_table_conf_to_yaml.py` and generate a yaml file with contains all the digests (level 0, 1, 2) for each entry of the 'all_fasta' table.
