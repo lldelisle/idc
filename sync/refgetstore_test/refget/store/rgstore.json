@@ -5,18 +5,18 @@
   "sequence_index": "sequences.rgsi",
   "collection_index": "collections.rgci",
   "mode": "Encoded",
-  "created_at": "2026-07-02T09:52:32.830939207+00:00",
+  "created_at": "2026-07-02T10:31:38.021644231+00:00",
   "ancillary_digests": true,
   "attribute_index": false,
   "collection_alias_namespaces": [
-    "galaxy_loc_file",
+    "galaxy_tool_data_table_conf",
     "galaxy_dbkey",
-    "galaxy_unique_build_id",
     "galaxy_name",
-    "galaxy_tool_data_table_conf"
+    "galaxy_unique_build_id",
+    "galaxy_loc_file"
   ],
-  "modified": "2026-07-02T09:52:32.838096078+00:00",
-  "collections_digest": "af9460a43fab3480908031a082e8ebd0614ecf13d9977c3fcdbdbd631b193efb",
-  "sequences_digest": "999a7d6aa6737c33dc505c227cda7f655a95a73d6710d9c38e7dc601bd445cb5",
-  "aliases_digest": "5903d6a0c455c3a4394aff774652df3b3b260e3d75f751549faffaca86c3def0"
+  "modified": "2026-07-02T10:31:38.022076995+00:00",
+  "collections_digest": "9558e591937a650f340c0637720f82ba80a4a7792d5d90b4b6d3d58b9ffca681",
+  "sequences_digest": "6327ff50eeb03bb91336589275fe400982eff46bb9e433c7419948b7c9180b8d",
+  "aliases_digest": "3ec0c7ee55ac861f9ec0bc34d366353dc3f32703b2d5d991d0e5cced815badc1"
 }

@@ -4,7 +4,7 @@ full_yaml_path = 'sync/cvmfs_20260701.yml'
 output_path = 'sync/test.yml'
 
 # If it is related to dbkey I keep specific dbkeys
-dbkeys_to_keep = ['Amel_4.5', 'apiMel4']
+dbkeys_to_keep = ['Amel_4.5', 'apiMel4', 'mm10']
 # If they are not present or it is not related to dbkeys
 # I keep a fixed amount of entries
 nb_to_keep = 1

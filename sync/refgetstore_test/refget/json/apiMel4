@@ -15981,15 +15981,11 @@
   },
   "aliases": [
     [
-      "galaxy_loc_file",
-      "/cvmfs/data.galaxyproject.org/managed/location/all_fasta_dbkeys.loc"
+      "galaxy_tool_data_table_conf",
+      "/cvmfs/data.galaxyproject.org/managed/location/tool_data_table_conf.xml"
     ],
     [
       "galaxy_dbkey",
-      "apiMel4"
-    ],
-    [
-      "galaxy_unique_build_id",
       "apiMel4"
     ],
     [
@@ -15997,8 +15993,12 @@
       "A. mellifera 04 Nov 2010 (Amel_4.5/apiMel4) (apiMel4)"
     ],
     [
-      "galaxy_tool_data_table_conf",
-      "/cvmfs/data.galaxyproject.org/managed/location/tool_data_table_conf.xml"
+      "galaxy_unique_build_id",
+      "apiMel4"
+    ],
+    [
+      "galaxy_loc_file",
+      "/cvmfs/data.galaxyproject.org/managed/location/all_fasta_dbkeys.loc"
     ]
   ]
 }

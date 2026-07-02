@@ -4,6 +4,11 @@ __dbkeys__:
   name: A. mellifera Nov. 2010 (GCF_000002195.4/Amel_4.5) (Amel_4.5)
   value: Amel_4.5
   xml_file: /cvmfs/data.galaxyproject.org/managed/location/tool_data_table_conf.xml
+- len_path: /cvmfs/data.galaxyproject.org/managed/len/ucsc/mm10.len
+  loc_file: /cvmfs/data.galaxyproject.org/managed/location/dbkeys_ucsc.loc
+  name: Mouse Dec. 2011 (GRCm38/mm10) (mm10)
+  value: mm10
+  xml_file: /cvmfs/data.galaxyproject.org/managed/location/tool_data_table_conf.xml
 - len_path: /cvmfs/data.galaxyproject.org/managed/len/ucsc/apiMel4.len
   loc_file: /cvmfs/data.galaxyproject.org/managed/location/dbkeys_ucsc.loc
   name: A. mellifera 04 Nov 2010 (Amel_4.5/apiMel4) (apiMel4)
@@ -16,6 +21,12 @@ alignseq_seq:
   value: hg19_rCRS_pUC18_phiX174
   xml_file: /cvmfs/data.galaxyproject.org/managed/location/tool_data_table_conf.xml
 all_fasta:
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/all_fasta.loc
+  name: 'Mouse (Mus Musculus): mm10'
+  path: /cvmfs/data.galaxyproject.org/byhand/mm10/seq/mm10.fa
+  value: mm10
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
 - dbkey: apiMel4
   loc_file: /cvmfs/data.galaxyproject.org/managed/location/all_fasta_dbkeys.loc
   name: A. mellifera 04 Nov 2010 (Amel_4.5/apiMel4) (apiMel4)
@@ -69,6 +80,12 @@ blastdb_p:
   value: nr_20210115
   xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
 bowtie2_indexes:
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/bowtie2_indices.loc
+  name: 'Mouse (Mus musculus): mm10'
+  path: /cvmfs/data.galaxyproject.org/byhand/mm10/bowtie2_index/mm10
+  value: mm10
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
 - dbkey: apiMel4
   loc_file: /cvmfs/data.galaxyproject.org/managed/location/bowtie2_indices.loc
   name: A. mellifera 04 Nov 2010 (Amel_4.5/apiMel4) (apiMel4)
@@ -82,18 +99,18 @@ bowtie2_indexes:
   value: Amel_4.5
   xml_file: /cvmfs/data.galaxyproject.org/managed/location/tool_data_table_conf.xml
 bowtie_indexes:
-- dbkey: Araly1
+- dbkey: mm10
   loc_file: /cvmfs/data.galaxyproject.org/byhand/location/bowtie_indices.loc
-  name: 'Arabidopsis lyrata: Araly1'
-  path: /cvmfs/data.galaxyproject.org/byhand/Araly1/bowtie_index/Araly1
-  value: Araly1
+  name: 'Mouse (Mus musculus): mm10'
+  path: /cvmfs/data.galaxyproject.org/byhand/mm10/bowtie_index/mm10
+  value: mm10
   xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
 bowtie_indexes_color:
-- dbkey: Araly1
+- dbkey: mm10
   loc_file: /cvmfs/data.galaxyproject.org/byhand/location/bowtie_indices_color.loc
-  name: 'Arabidopsis lyrata: Araly1'
-  path: /cvmfs/data.galaxyproject.org/byhand/Araly1/bowtie_index/cs/Araly1
-  value: Araly1
+  name: 'Mouse (Mus musculus): mm10'
+  path: /cvmfs/data.galaxyproject.org/byhand/mm10/bowtie_index/cs/mm10
+  value: mm10
   xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
 bracken_databases:
 - loc_file: /cvmfs/data.galaxyproject.org/byhand/location/bracken_databases.loc
@@ -115,11 +132,11 @@ busco_database_options:
   value: liliopsida_odb10
   xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
 bwa_indexes:
-- dbkey: Araly1
+- dbkey: mm10
   loc_file: /cvmfs/data.galaxyproject.org/byhand/location/bwa_index.loc
-  name: 'Arabidopsis lyrata: Araly1'
-  path: /cvmfs/data.galaxyproject.org/byhand/Araly1/bwa_index/Araly1.fa
-  value: Araly1
+  name: 'Mouse (Mus musculus): mm10'
+  path: /cvmfs/data.galaxyproject.org/byhand/mm10/bwa_index_v0.5.9-r16/mm10.fa
+  value: mm10
   xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
 bwa_indexes_color:
 - dbkey: '13953'
@@ -136,6 +153,12 @@ bwa_mem2_indexes:
   value: mm39
   xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
 bwa_mem_indexes:
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/bwa_mem_index.loc
+  name: 'Mouse (Mus musculus): mm10'
+  path: /cvmfs/data.galaxyproject.org/byhand/mm10/bwa_index_v0.7.10-r789/mm10.fa
+  value: mm10
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
 - dbkey: apiMel4
   loc_file: /cvmfs/data.galaxyproject.org/managed/location/bwa_mem_index.loc
   name: A. mellifera 04 Nov 2010 (Amel_4.5/apiMel4) (apiMel4)
@@ -149,11 +172,11 @@ bwa_mem_indexes:
   value: Amel_4.5
   xml_file: /cvmfs/data.galaxyproject.org/managed/location/tool_data_table_conf.xml
 bwameth_indexes:
-- dbkey: hg19
+- dbkey: mm10
   loc_file: /cvmfs/data.galaxyproject.org/byhand/location/bwameth_indexes.loc
-  name: Human (hg19)
-  path: /cvmfs/data.galaxyproject.org/byhand/hg19/bwameth_index/hg19.fa
-  value: hg19
+  name: Mouse (mm10)
+  path: /cvmfs/data.galaxyproject.org/byhand/mm10/bwameth_index/mm10.fa
+  value: mm10
   xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
 ccat_configurations:
 - loc_file: /cvmfs/data.galaxyproject.org/byhand/location/ccat_configurations.loc
@@ -187,11 +210,29 @@ coreprofiler_versioned_scheme:
   value: coreprofiler_downloaded_2026-01-15-escherichia_v1-cgMLST-2513-enterobase-no_token
   xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
 customProDB:
-- dbkey: ce11
+- dbkey: mm10
   loc_file: /cvmfs/data.galaxyproject.org/byhand/location/customProDB.loc
-  name: C.elegans (Ensembl 89 celegans) (ce11/WBcel235)
-  path: /cvmfs/data.galaxyproject.org/byhand/customProDB/omicron-data.duckdns.org/customProDB/ensembl/celegans-may2017
-  value: ce11_WBcel235
+  name: Mouse (Ensembl 89 mmusculus) (mm10/GRCm38.p5)
+  path: /cvmfs/data.galaxyproject.org/byhand/customProDB/omicron-data.duckdns.org/customProDB/ensembl/mmusculus-may2017
+  value: mm10_GRCm38.p5
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/customProDB.loc
+  name: Mouse (Ensembl 86 mmusculus) (mm10/GRCm38.p4)
+  path: /cvmfs/data.galaxyproject.org/byhand/customProDB/omicron-data.duckdns.org/customProDB/ensembl/mmusculus-oct2016
+  value: mm10_GRCm38.p4
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/customProDB.loc
+  name: Mouse (Ensembl 80 mmusculus) (mm10/GRCm38.p3)
+  path: /cvmfs/data.galaxyproject.org/byhand/customProDB/omicron-data.duckdns.org/customProDB/ensembl/mmusculus-may2015
+  value: mm10_GRCm38.p3
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/customProDB.loc
+  name: Mouse (Ensembl 77 mmusculus) (mm10/GRCm38.p2)
+  path: /cvmfs/data.galaxyproject.org/byhand/customProDB/omicron-data.duckdns.org/customProDB/ensembl/mmusculus-oct2014
+  value: mm10_GRCm38.p2
   xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
 dada2_species:
 - loc_file: /cvmfs/data.galaxyproject.org/byhand/location/dada2_species.loc
@@ -231,6 +272,12 @@ eggnog_mapper_db_versioned:
   version: 5.0.2
   xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
 fasta_indexes:
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/fasta_indexes.loc
+  name: 'Mouse (Mus Musculus): mm10'
+  path: /cvmfs/data.galaxyproject.org/byhand/mm10/sam_index/mm10.fa
+  value: mm10
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
 - dbkey: apiMel4
   loc_file: /cvmfs/data.galaxyproject.org/managed/location/fasta_indexes.loc
   name: A. mellifera 04 Nov 2010 (Amel_4.5/apiMel4) (apiMel4)
@@ -299,6 +346,12 @@ gtdbtk_database_versioned:
   version: '220'
   xml_file: /cvmfs/data.galaxyproject.org/managed/location/tool_data_table_conf.xml
 hisat2_indexes:
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/managed/location/hisat2_indexes.loc
+  name: 'Mouse (Mus Musculus): mm10'
+  path: /cvmfs/data.galaxyproject.org/managed/hisat2_index/mm10/mm10
+  value: mm10
+  xml_file: /cvmfs/data.galaxyproject.org/managed/location/tool_data_table_conf.xml
 - dbkey: Amel_4.5
   loc_file: /cvmfs/data.galaxyproject.org/managed/location/hisat2_indexes.loc
   name: A. mellifera Nov. 2010 (GCF_000002195.4/Amel_4.5) (Amel_4.5)
@@ -379,10 +432,225 @@ lastz_seqs:
   value: Araly1
   xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
 liftOver:
-- dbkey: ailMel1
+- dbkey: mm10
   loc_file: /cvmfs/data.galaxyproject.org/byhand/location/liftOver.loc
-  name: canFam2
-  value: /cvmfs/data.galaxyproject.org/byhand/ailMel1/liftOver/ailMel1ToCanFam2.over.chain
+  name: ailMel1
+  value: /cvmfs/data.galaxyproject.org/byhand/mm10/liftOver/mm10ToAilMel1.over.chain
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/liftOver.loc
+  name: anoCar2
+  value: /cvmfs/data.galaxyproject.org/byhand/mm10/liftOver/mm10ToAnoCar2.over.chain
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/liftOver.loc
+  name: bosTau7
+  value: /cvmfs/data.galaxyproject.org/byhand/mm10/liftOver/mm10ToBosTau7.over.chain
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/liftOver.loc
+  name: calJac3
+  value: /cvmfs/data.galaxyproject.org/byhand/mm10/liftOver/mm10ToCalJac3.over.chain
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/liftOver.loc
+  name: canFam3
+  value: /cvmfs/data.galaxyproject.org/byhand/mm10/liftOver/mm10ToCanFam3.over.chain
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/liftOver.loc
+  name: cavPor3
+  value: /cvmfs/data.galaxyproject.org/byhand/mm10/liftOver/mm10ToCavPor3.over.chain
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/liftOver.loc
+  name: choHof1
+  value: /cvmfs/data.galaxyproject.org/byhand/mm10/liftOver/mm10ToChoHof1.over.chain
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/liftOver.loc
+  name: chrPic1
+  value: /cvmfs/data.galaxyproject.org/byhand/mm10/liftOver/mm10ToChrPic1.over.chain
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/liftOver.loc
+  name: danRer7
+  value: /cvmfs/data.galaxyproject.org/byhand/mm10/liftOver/mm10ToDanRer7.over.chain
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/liftOver.loc
+  name: dasNov2
+  value: /cvmfs/data.galaxyproject.org/byhand/mm10/liftOver/mm10ToDasNov2.over.chain
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/liftOver.loc
+  name: dasNov3
+  value: /cvmfs/data.galaxyproject.org/byhand/mm10/liftOver/mm10ToDasNov3.over.chain
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/liftOver.loc
+  name: dipOrd1
+  value: /cvmfs/data.galaxyproject.org/byhand/mm10/liftOver/mm10ToDipOrd1.over.chain
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/liftOver.loc
+  name: echTel1
+  value: /cvmfs/data.galaxyproject.org/byhand/mm10/liftOver/mm10ToEchTel1.over.chain
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/liftOver.loc
+  name: equCab2
+  value: /cvmfs/data.galaxyproject.org/byhand/mm10/liftOver/mm10ToEquCab2.over.chain
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/liftOver.loc
+  name: eriEur1
+  value: /cvmfs/data.galaxyproject.org/byhand/mm10/liftOver/mm10ToEriEur1.over.chain
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/liftOver.loc
+  name: felCat4
+  value: /cvmfs/data.galaxyproject.org/byhand/mm10/liftOver/mm10ToFelCat4.over.chain
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/liftOver.loc
+  name: felCat5
+  value: /cvmfs/data.galaxyproject.org/byhand/mm10/liftOver/mm10ToFelCat5.over.chain
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/liftOver.loc
+  name: fr3
+  value: /cvmfs/data.galaxyproject.org/byhand/mm10/liftOver/mm10ToFr3.over.chain
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/liftOver.loc
+  name: gadMor1
+  value: /cvmfs/data.galaxyproject.org/byhand/mm10/liftOver/mm10ToGadMor1.over.chain
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/liftOver.loc
+  name: galGal4
+  value: /cvmfs/data.galaxyproject.org/byhand/mm10/liftOver/mm10ToGalGal4.over.chain
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/liftOver.loc
+  name: gasAcu1
+  value: /cvmfs/data.galaxyproject.org/byhand/mm10/liftOver/mm10ToGasAcu1.over.chain
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/liftOver.loc
+  name: geoFor1
+  value: /cvmfs/data.galaxyproject.org/byhand/mm10/liftOver/mm10ToGeoFor1.over.chain
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/liftOver.loc
+  name: gorGor3
+  value: /cvmfs/data.galaxyproject.org/byhand/mm10/liftOver/mm10ToGorGor3.over.chain
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/liftOver.loc
+  name: hetGla1
+  value: /cvmfs/data.galaxyproject.org/byhand/mm10/liftOver/mm10ToHetGla1.over.chain
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/liftOver.loc
+  name: hetGla2
+  value: /cvmfs/data.galaxyproject.org/byhand/mm10/liftOver/mm10ToHetGla2.over.chain
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/liftOver.loc
+  name: hg19
+  value: /cvmfs/data.galaxyproject.org/byhand/mm10/liftOver/mm10ToHg19.over.chain
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/liftOver.loc
+  name: hg38
+  value: /cvmfs/data.galaxyproject.org/byhand/mm10/liftOver/mm10ToHg38.over.chain
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/liftOver.loc
+  name: rn4
+  value: /cvmfs/data.galaxyproject.org/byhand/mm10/liftOver/mm10ToRn4.over.chain
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/liftOver.loc
+  name: rn5
+  value: /cvmfs/data.galaxyproject.org/byhand/mm10/liftOver/mm10ToRn5.over.chain
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/liftOver.loc
+  name: saiBol1
+  value: /cvmfs/data.galaxyproject.org/byhand/mm10/liftOver/mm10ToSaiBol1.over.chain
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/liftOver.loc
+  name: sarHar1
+  value: /cvmfs/data.galaxyproject.org/byhand/mm10/liftOver/mm10ToSarHar1.over.chain
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/liftOver.loc
+  name: sorAra1
+  value: /cvmfs/data.galaxyproject.org/byhand/mm10/liftOver/mm10ToSorAra1.over.chain
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/liftOver.loc
+  name: speTri2
+  value: /cvmfs/data.galaxyproject.org/byhand/mm10/liftOver/mm10ToSpeTri2.over.chain
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/liftOver.loc
+  name: susScr2
+  value: /cvmfs/data.galaxyproject.org/byhand/mm10/liftOver/mm10ToSusScr2.over.chain
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/liftOver.loc
+  name: susScr3
+  value: /cvmfs/data.galaxyproject.org/byhand/mm10/liftOver/mm10ToSusScr3.over.chain
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/liftOver.loc
+  name: taeGut1
+  value: /cvmfs/data.galaxyproject.org/byhand/mm10/liftOver/mm10ToTaeGut1.over.chain
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/liftOver.loc
+  name: tarSyr1
+  value: /cvmfs/data.galaxyproject.org/byhand/mm10/liftOver/mm10ToTarSyr1.over.chain
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/liftOver.loc
+  name: tetNig2
+  value: /cvmfs/data.galaxyproject.org/byhand/mm10/liftOver/mm10ToTetNig2.over.chain
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/liftOver.loc
+  name: triMan1
+  value: /cvmfs/data.galaxyproject.org/byhand/mm10/liftOver/mm10ToTriMan1.over.chain
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/liftOver.loc
+  name: tupBel1
+  value: /cvmfs/data.galaxyproject.org/byhand/mm10/liftOver/mm10ToTupBel1.over.chain
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/liftOver.loc
+  name: turTru1
+  value: /cvmfs/data.galaxyproject.org/byhand/mm10/liftOver/mm10ToTurTru1.over.chain
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/liftOver.loc
+  name: turTru2
+  value: /cvmfs/data.galaxyproject.org/byhand/mm10/liftOver/mm10ToTurTru2.over.chain
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/liftOver.loc
+  name: vicPac1
+  value: /cvmfs/data.galaxyproject.org/byhand/mm10/liftOver/mm10ToVicPac1.over.chain
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/liftOver.loc
+  name: xenTro3
+  value: /cvmfs/data.galaxyproject.org/byhand/mm10/liftOver/mm10ToXenTro3.over.chain
   xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
 maf_indexes:
 - exists_in_maf: hg38,panTro5,panPan2,gorGor5,ponAbe2,nomLeu3,rheMac8,macFas5,macNem1,cerAty1,papAnu3,chlSab2,manLeu1,nasLar1,colAng1,rhiRox1,rhiBie1,calJac3,saiBol1,cebCap1,aotNan1,tarSyr2,micMur3,proCoq1,eulMac1,eulFla1,otoGar3,mm10,canFam3,dasNov3
@@ -428,11 +696,11 @@ mmseqs2_databases:
   version: 17-b804f
   xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
 mosaik_indexes:
-- dbkey: Araly1
+- dbkey: mm10
   loc_file: /cvmfs/data.galaxyproject.org/byhand/location/mosaik_index.loc
-  name: 'Arabidopsis lyrata: Araly1'
-  path: /cvmfs/data.galaxyproject.org/byhand/Araly1/picard_index/Araly1.fa
-  value: Araly1
+  name: 'Mouse (Mus musculus): mm10'
+  path: /cvmfs/data.galaxyproject.org/byhand/mm10/picard_index/mm10.fa
+  value: mm10
   xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
 ncbi_fcs_gx_config:
 - loc_file: /cvmfs/data.galaxyproject.org/byhand/location/ncbi_fcs_gx_config.tsv
@@ -495,6 +763,12 @@ perm_color_indexes:
   value: hg19_F3_50
   xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
 picard_indexes:
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/picard_index.loc
+  name: 'Mouse (Mus musculus): mm10'
+  path: /cvmfs/data.galaxyproject.org/byhand/mm10/picard_index/mm10.fa
+  value: mm10
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
 - dbkey: apiMel4
   loc_file: /cvmfs/data.galaxyproject.org/managed/location/picard_index.loc
   name: A. mellifera 04 Nov 2010 (Amel_4.5/apiMel4) (apiMel4)
@@ -551,6 +825,13 @@ rgi_wildcard:
   wildcard_version: 4.0.2
   xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
 rnastar_index2:
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/managed/location/rnastar_index2.loc
+  name: 'Mouse (Mus Musculus): mm10'
+  path: /cvmfs/data.galaxyproject.org/managed/rnastar_index2/mm10/dataset_952366_files
+  value: mm10
+  with-gtf: '0'
+  xml_file: /cvmfs/data.galaxyproject.org/managed/location/tool_data_table_conf.xml
 - dbkey: apiMel4
   loc_file: /cvmfs/data.galaxyproject.org/managed/location/rnastar_index2.loc
   name: A. mellifera 04 Nov 2010 (Amel_4.5/apiMel4) (apiMel4)
@@ -566,6 +847,14 @@ rnastar_index2:
   with-gtf: '0'
   xml_file: /cvmfs/data.galaxyproject.org/managed/location/tool_data_table_conf.xml
 rnastar_index2x_versioned:
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/managed/location/rnastar_index2x_versioned.loc
+  name: 'Mouse (Mus Musculus): mm10'
+  path: /cvmfs/data.galaxyproject.org/managed/rnastar/2.7.4a/mm10/mm10/dataset_5e31b655-e1b3-4c90-ae18-bbafb09a15fc_files
+  value: mm10
+  version: 2.7.4a
+  with_gene_model: '0'
+  xml_file: /cvmfs/data.galaxyproject.org/managed/location/tool_data_table_conf.xml
 - dbkey: apiMel4
   loc_file: /cvmfs/data.galaxyproject.org/managed/location/rnastar_index2x_versioned.loc
   name: A. mellifera 04 Nov 2010 (Amel_4.5/apiMel4) (apiMel4)
@@ -583,11 +872,11 @@ rnastar_index2x_versioned:
   with_gene_model: '0'
   xml_file: /cvmfs/data.galaxyproject.org/managed/location/tool_data_table_conf.xml
 salmon_indexes_versioned:
-- dbkey: hg38
+- dbkey: mm10
   loc_file: /cvmfs/data.galaxyproject.org/byhand/location/salmon_indexes_versioned.loc
-  name: 'Human (Homo sapiens) (b38): hg38'
-  path: /cvmfs/data.galaxyproject.org/byhand/hg38/salmon_index/hg38/q7
-  value: hg38
+  name: 'Mouse (Mus Musculus): mm10'
+  path: /cvmfs/data.galaxyproject.org/byhand/mm10/salmon_index/mm10/q7
+  value: mm10
   version: q7
   xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
 sam_fa_indexes:
@@ -605,11 +894,11 @@ snpeffv_genomedb:
   version: SnpEff4.3
   xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
 srma_indexes:
-- dbkey: Araly1
+- dbkey: mm10
   loc_file: /cvmfs/data.galaxyproject.org/byhand/location/picard_index.loc
-  name: 'Arabidopsis lyrata: Araly1'
-  path: /cvmfs/data.galaxyproject.org/byhand/Araly1/picard_index/Araly1.fa
-  value: Araly1
+  name: 'Mouse (Mus musculus): mm10'
+  path: /cvmfs/data.galaxyproject.org/byhand/mm10/picard_index/mm10.fa
+  value: mm10
   xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
 staramr_database:
 - loc_file: /cvmfs/data.galaxyproject.org/byhand/location/staramr_database.loc
@@ -638,6 +927,12 @@ sylph_tax_database:
   version: '1'
   xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
 tophat2_indexes:
+- dbkey: mm10
+  loc_file: /cvmfs/data.galaxyproject.org/byhand/location/bowtie2_indices.loc
+  name: 'Mouse (Mus musculus): mm10'
+  path: /cvmfs/data.galaxyproject.org/byhand/mm10/bowtie2_index/mm10
+  value: mm10
+  xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
 - dbkey: apiMel4
   loc_file: /cvmfs/data.galaxyproject.org/managed/location/tophat2_indices.loc
   name: A. mellifera 04 Nov 2010 (Amel_4.5/apiMel4) (apiMel4)
@@ -651,18 +946,18 @@ tophat2_indexes:
   value: Amel_4.5
   xml_file: /cvmfs/data.galaxyproject.org/managed/location/tool_data_table_conf.xml
 tophat_indexes:
-- dbkey: Araly1
+- dbkey: mm10
   loc_file: /cvmfs/data.galaxyproject.org/byhand/location/bowtie_indices.loc
-  name: 'Arabidopsis lyrata: Araly1'
-  path: /cvmfs/data.galaxyproject.org/byhand/Araly1/bowtie_index/Araly1
-  value: Araly1
+  name: 'Mouse (Mus musculus): mm10'
+  path: /cvmfs/data.galaxyproject.org/byhand/mm10/bowtie_index/mm10
+  value: mm10
   xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
 tophat_indexes_color:
-- dbkey: Araly1
+- dbkey: mm10
   loc_file: /cvmfs/data.galaxyproject.org/byhand/location/bowtie_indices_color.loc
-  name: 'Arabidopsis lyrata: Araly1'
-  path: /cvmfs/data.galaxyproject.org/byhand/Araly1/bowtie_index/cs/Araly1
-  value: Araly1
+  name: 'Mouse (Mus musculus): mm10'
+  path: /cvmfs/data.galaxyproject.org/byhand/mm10/bowtie_index/cs/mm10
+  value: mm10
   xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
 twobit:
 - loc_file: /cvmfs/data.galaxyproject.org/byhand/location/twobit.loc
