@@ -31,6 +31,12 @@ parser.add_argument(
     default="warning",
     help="Provide logging level. Example --loglevel debug, default=warning",
 )
+parser.add_argument(
+    "-n",
+    "--no-hash",
+    action="store_true",
+    help="Do not compute the hash",
+)
 
 args = parser.parse_args()
 
@@ -113,7 +119,10 @@ def hash_one(args):
     """
     rel, path = args
     size = path.stat().st_size
-    digest = file_hash(path)
+    if args.no_hash:
+        digest = ""
+    else:
+        digest = file_hash(path)
     return {"path": rel, "size": size, "digest": digest, "symlink": path.is_symlink()}
 
 
@@ -147,7 +156,11 @@ for table_name in all_tables_content:
     logger.info(
         f"Checking table {table_name}: {len(all_tables_content[table_name])} entries"
     )
-    for entry in all_tables_content[table_name]:
+    for i, entry in enumerate(all_tables_content[table_name]):
+        if i % 100 == 0:
+            logger.debug(
+                f"Checking entry {i}"
+            )
         path = None
         for c in entry:
             if entry[c].startswith("/") and c not in ["xml_file", "loc_file"]:
