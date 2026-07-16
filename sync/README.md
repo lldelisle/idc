@@ -23,7 +23,7 @@ uv pip install -r requirements.txt
 There is one script that can be used to list all the indices available per data table using as input all the tool_data_table_conf.xml files (default are the 4 from CVMFS including the brc and vgp).
 
 ```bash
-python sync/tool_data_table_conf_to_yaml.py -o sync/cvmfs_20260626.yml &> sync/cvmfs_20260626.log
+python sync/tool_data_table_conf_to_yaml.py -o sync/cvmfs_20260715.yml &> sync/cvmfs_20260715.log
 ```
 
 One can use `--tool_data_table_conf` to specifiy the tool_data_table_conf.xml files to be considered. 

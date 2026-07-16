@@ -333,11 +333,11 @@ humann_utility_mapping:
   value: utility_mapping-full-map_pfam_name-3.6.0-29032023.gz
   xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
 indexed_maf_files:
-- dbkey: exists_in_maf:build1,build2,build3
+- dbkey: galGal2,panTro1,canFam1,fr1,hg17,rheMac1,monDom1,mm6,rn3,tetNig1,xenTro1,danRer2
   loc_file: /cvmfs/data.galaxyproject.org/byhand/location/maf_index.loc
-  name: '#Display_name UID'
-  species: Comma_Separated_Full_Paths_To_Files
-  value: indexed_for:build1,build2,build3
+  name: ENCODE TBA (hg17)
+  species: armadillo,baboon,galGal2,panTro1,colobus_monkey,cow,canFam1,dusky_titi,elephant,fr1,galago,hedgehog,hg17,rheMac1,marmoset,monDom1,mm6,mouse_lemur,owl_monkey,platypus,rabbit,rn3,rfbat,shrew,tenrec,tetNig1,xenTro1,danRer2
+  value: ENCODE_TBA_hg17
   xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
 infernal:
 - loc_file: /cvmfs/data.galaxyproject.org/byhand/location/infernal.loc
@@ -394,7 +394,10 @@ maf_indexes:
   xml_file: /cvmfs/data.galaxyproject.org/managed/location/tool_data_table_conf.xml
 mapseq_db:
 - loc_file: /cvmfs/data.galaxyproject.org/byhand/location/mapseq_db.loc
-  value: ''
+  name: MGnify LSU (v5.0.7) - silva_lsu-20200130 downloaded at 2023-09-26
+  path: /cvmfs/data.galaxyproject.org/byhand/mapseq/mgnify_lsu_from_2023-09-26
+  value: mgnify_lsu_from_2023-09-26
+  version: 5.0.7
   xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
 metaphlan_database_versioned:
 - db_version: SGB
@@ -480,7 +483,10 @@ ngs_sim_fasta:
   xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
 omamer:
 - loc_file: /cvmfs/data.galaxyproject.org/byhand/location/omamer.loc
-  value: ''
+  name: Primates-v2.0.0
+  path: /cvmfs/data.galaxyproject.org/byhand/omamer/Primates-v2.0.0.h5
+  value: Primates-v2.0.0.h5
+  version: 2.0.2
   xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
 perm_base_indexes:
 - loc_file: /cvmfs/data.galaxyproject.org/byhand/location/perm_base_index.loc
@@ -523,7 +529,9 @@ plasmidfinder_database:
   xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
 rRNA_databases:
 - loc_file: /cvmfs/data.galaxyproject.org/byhand/location/rRNA_databases.loc
-  value: ''
+  name: rfam-5s-database-id98
+  path: /cvmfs/data.galaxyproject.org/byhand/rRNA_databases/rfam-5s-database-id98/rfam-5s-database-id98.fasta
+  value: 2.1b-rfam-5s-database-id98
   xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
 rgi_card:
 - card_annotation: /cvmfs/data.galaxyproject.org/byhand/rgi_card/card_4_0_1/card_annotation.fasta
