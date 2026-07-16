@@ -23,7 +23,7 @@ uv pip install -r requirements.txt
 There is one script that can be used to list all the indices available per data table using as input all the tool_data_table_conf.xml files (default are the 4 from CVMFS including the brc and vgp).
 
 ```bash
-python sync/tool_data_table_conf_to_yaml.py -o sync/cvmfs_20260626.yml &> sync/cvmfs_20260626.log
+python sync/tool_data_table_conf_to_yaml.py -o sync/cvmfs_20260715.yml &> sync/cvmfs_20260715.log
 ```
 
 One can use `--tool_data_table_conf` to specifiy the tool_data_table_conf.xml files to be considered. 
@@ -313,6 +313,22 @@ Or get it back from [UCSC](https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/bi
 #### rn3
 
 `/cvmfs/data.galaxyproject.org/byhand/rn3/seq/rn3canon.fa` should be replaced by `/cvmfs/data.galaxyproject.org/byhand/rn3/seq/rn3.fa`
+
+### Get the size of the fasta files
+
+I extracted the all_fasta entry from the full CVMFS_20260715 entries.
+
+They I got the yaml with the size with:
+
+```bash
+python ${script_directory}/all_tables_content_add_hashes.py -i "${output_basename}.yml" -o "${output_basename}" -n -log debug
+```
+
+And I summed up the size of the fasta files with:
+
+```bash
+python ${script_directory}/get_fasta_size_CVMFS.py > cvmfs_20260715_fasta_only/get_size.log
+```
 
 
 ## Ideas/TODO

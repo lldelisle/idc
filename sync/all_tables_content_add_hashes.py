@@ -31,6 +31,12 @@ parser.add_argument(
     default="warning",
     help="Provide logging level. Example --loglevel debug, default=warning",
 )
+parser.add_argument(
+    "-n",
+    "--no-hash",
+    action="store_true",
+    help="Do not compute the hash",
+)
 
 args = parser.parse_args()
 
@@ -107,24 +113,28 @@ def iter_matching_files(pathspec):
         )
 
 
-def hash_one(args):
+def hash_one(f_no_hash):
     """
     get the info stored in the manifest (path, size, hash, symlink)
     """
+    args, no_hash = f_no_hash
     rel, path = args
     size = path.stat().st_size
-    digest = file_hash(path)
+    if no_hash:
+        digest = ""
+    else:
+        digest = file_hash(path)
     return {"path": rel, "size": size, "digest": digest, "symlink": path.is_symlink()}
 
 
-def manifest_and_hash(root, max_workers=8):
+def manifest_and_hash(root, max_workers=8, no_hash=False):
     """
     comput manifest (all contents + metainfo) and a global hash
     """
     files = iter_matching_files(root)
 
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
-        manifest = list(executor.map(hash_one, [f for f in files]))
+        manifest = list(executor.map(hash_one, [(f, no_hash) for f in files]))
 
     # Compute the master hash in deterministic order
     master = hashlib.sha256()
@@ -147,7 +157,11 @@ for table_name in all_tables_content:
     logger.info(
         f"Checking table {table_name}: {len(all_tables_content[table_name])} entries"
     )
-    for entry in all_tables_content[table_name]:
+    for i, entry in enumerate(all_tables_content[table_name]):
+        if i % 100 == 0:
+            logger.debug(
+                f"Checking entry {i}"
+            )
         path = None
         for c in entry:
             if entry[c].startswith("/") and c not in ["xml_file", "loc_file"]:
@@ -155,7 +169,7 @@ for table_name in all_tables_content:
         if path is None:
             continue
         try:
-            entry["manifest"], entry["digest"] = manifest_and_hash(path, args.threads)
+            entry["manifest"], entry["digest"] = manifest_and_hash(path, args.threads, args.no_hash)
         except Exception as e:
             logger.error(f"Could not compute digest of {path}: {e}")
             continue
