@@ -436,19 +436,15 @@ all_fasta:
   value: ce5
   xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
 - dbkey: ce6
-  digest: 95a189f7b53260fe68ad8405200dee47d813018e02ebcbe3cd87852c0778efea
+  digest: fc17ddbad61bdc1e35d09858c8fa1e6afc3e4c081bf4b1677d72402ee9e069ae
   loc_file: /cvmfs/data.galaxyproject.org/byhand/location/all_fasta.loc
   manifest:
-  - digest: ''
-    path: ce6.2bit
-    size: 25784539
-    symlink: false
   - digest: ''
     path: ce6.fa
     size: 102287104
     symlink: false
   name: 'C. elegans (WS190): ce6'
-  path: /cvmfs/data.galaxyproject.org/byhand/ce6/seq/c6.fa
+  path: /cvmfs/data.galaxyproject.org/byhand/ce6/seq/ce6.fa
   value: ce6
   xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
 - dbkey: ce7
@@ -564,19 +560,15 @@ all_fasta:
   value: galGal4
   xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
 - dbkey: panTro1
-  digest: a52e9172fb3011061ad88458682f52ecf0784c5eb620bdb81721e24c406aa195
+  digest: 2bae9c0ffd05276e1a640590643fc6f1b80b00a55ffa44d802bbbffafcdd6f0c
   loc_file: /cvmfs/data.galaxyproject.org/byhand/location/all_fasta.loc
   manifest:
-  - digest: ''
-    path: panTro1.2bit
-    size: 1138785091
-    symlink: false
   - digest: ''
     path: panTro1.fa
     size: 4508783494
     symlink: false
   name: 'Chimpanzee (Pan troglodytes): panTro1 Canonical'
-  path: /cvmfs/data.galaxyproject.org/byhand/panTro1/seq/panTro1canon.fa
+  path: /cvmfs/data.galaxyproject.org/byhand/panTro1/seq/panTro1.fa
   value: panTro1canon
   xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
 - dbkey: panTro1
@@ -2556,19 +2548,15 @@ all_fasta:
   value: oryCun2
   xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
 - dbkey: rn3
-  digest: 74c14eb8366fefca5b62ad9e0ecab0c363326a0f4d036a0126e34994f6427655
+  digest: 05583ba2255fd5d8e4f71eca1ea13cac5362241f58521a3c989d29a866abcf60
   loc_file: /cvmfs/data.galaxyproject.org/byhand/location/all_fasta.loc
   manifest:
-  - digest: ''
-    path: rn3.2bit
-    size: 744847968
-    symlink: false
   - digest: ''
     path: rn3.fa
     size: 2891855938
     symlink: false
   name: 'Rat (Rattus norvegicus): rn3 Canonical'
-  path: /cvmfs/data.galaxyproject.org/byhand/rn3/seq/rn3canon.fa
+  path: /cvmfs/data.galaxyproject.org/byhand/rn3/seq/rn3.fa
   value: rn3canon
   xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
 - dbkey: rn3

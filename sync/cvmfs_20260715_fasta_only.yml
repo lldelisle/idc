@@ -218,7 +218,7 @@ all_fasta:
 - dbkey: ce6
   loc_file: /cvmfs/data.galaxyproject.org/byhand/location/all_fasta.loc
   name: 'C. elegans (WS190): ce6'
-  path: /cvmfs/data.galaxyproject.org/byhand/ce6/seq/c6.fa
+  path: /cvmfs/data.galaxyproject.org/byhand/ce6/seq/ce6.fa
   value: ce6
   xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
 - dbkey: ce7
@@ -278,7 +278,7 @@ all_fasta:
 - dbkey: panTro1
   loc_file: /cvmfs/data.galaxyproject.org/byhand/location/all_fasta.loc
   name: 'Chimpanzee (Pan troglodytes): panTro1 Canonical'
-  path: /cvmfs/data.galaxyproject.org/byhand/panTro1/seq/panTro1canon.fa
+  path: /cvmfs/data.galaxyproject.org/byhand/panTro1/seq/panTro1.fa
   value: panTro1canon
   xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
 - dbkey: panTro1
@@ -1166,7 +1166,7 @@ all_fasta:
 - dbkey: rn3
   loc_file: /cvmfs/data.galaxyproject.org/byhand/location/all_fasta.loc
   name: 'Rat (Rattus norvegicus): rn3 Canonical'
-  path: /cvmfs/data.galaxyproject.org/byhand/rn3/seq/rn3canon.fa
+  path: /cvmfs/data.galaxyproject.org/byhand/rn3/seq/rn3.fa
   value: rn3canon
   xml_file: /cvmfs/data.galaxyproject.org/byhand/location/tool_data_table_conf.xml
 - dbkey: rn3
