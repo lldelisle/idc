@@ -314,6 +314,22 @@ Or get it back from [UCSC](https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/bi
 
 `/cvmfs/data.galaxyproject.org/byhand/rn3/seq/rn3canon.fa` should be replaced by `/cvmfs/data.galaxyproject.org/byhand/rn3/seq/rn3.fa`
 
+### Get the size of the fasta files
+
+I extracted the all_fasta entry from the full CVMFS_20260715 entries.
+
+They I got the yaml with the size with:
+
+```bash
+python ${script_directory}/all_tables_content_add_hashes.py -i "${output_basename}.yml" -o "${output_basename}" -n -log debug
+```
+
+And I summed up the size of the fasta files with:
+
+```bash
+python ${script_directory}/get_fasta_size_CVMFS.py > cvmfs_20260715_fasta_only/get_size.log
+```
+
 
 ## Ideas/TODO
 

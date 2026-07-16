@@ -1,5 +1,5 @@
 import yaml
-with open("sync/cvmfs_20260715_fasta_only/all_fasta.yaml", 'r') as f:
+with open("cvmfs_20260715_fasta_only/all_fasta.yaml", 'r') as f:
     all_fasta_content = yaml.safe_load(f)
 
 total_size = 0
