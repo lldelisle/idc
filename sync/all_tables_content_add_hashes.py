@@ -141,44 +141,52 @@ def manifest_and_hash(root, max_workers=8):
 
     return manifest, master.hexdigest()
 
-# sorted_all_tables_names = []
-# if 'all_fasta' in all_tables_content:
-#     sorted_all_tables_names.append('all_fasta')
-# sorted_all_tables_names += [tn for tn in all_tables_content if tn != 'all_fasta']
-
 # for table_name in sorted_all_tables_names:
 for table_name in all_tables_content:
 
     yaml_path = str(args.output) + "/" + table_name + ".yaml"
     if os.path.exists(yaml_path):
-        with open(yaml_path, 'r') as file
-            content_with_hashes = yaml.safe_load(file)
-            assert table_name in content_with_hashes
+        # Read the existing file
+        with open(yaml_path, 'r') as file:
+            old_content_with_hashes = yaml.safe_load(file)
+            assert table_name in old_content_with_hashes
     else:
-        content_with_hashes = {}
-        content_with_hashes[table_name] = []
+        old_content_with_hashes = {table_name: []}
+    content_with_hashes = {}
+    content_with_hashes[table_name] = []
 
-    # if the yaml contained data the original data table entries are
-    #reconstructed by removing the manifest and digest keys
-    entries = set()
-    for hashed_old_entry in content_with_hashes[table_name]:
+    # if the yaml contained data
+    # the old data is stored in a dictionary where
+    # keys are the original entry
+    # (without manifest and digest keys)
+    # and values are the full entries
+    entries = dict()
+    for hashed_old_entry in old_content_with_hashes[table_name]:
         old_entry = {}
         for key in hashed_old_entry:
             if key not in ["manifest", "digest"]:
                 old_entry[key] = hashed_old_entry[key]
-    entries.add(old_entry)
+        entries[str(sorted(old_entry.items()))] = hashed_old_entry
 
     logger.info(
         f"Checking table {table_name}: {len(all_tables_content[table_name])} entries"
     )
     percent_reported = -1
     for i, entry in enumerate(all_tables_content[table_name]):
-        if entry in entries:
+        # First we try to get the old manifest
+        old_manifest = []
+        entry_string = str(sorted(entry.items()))
+        if entry_string in entries:
+            # Try to get the old_manifest
+            old_manifest = entries[entry_string]['manifest']
+        # If the old_manifest is not empty we just copy it from the old data
+        if len(old_manifest) > 0:
             logger.info(
                 f"Skipping table {table_name} entry {i}: {entry}"
             )
+            content_with_hashes[table_name].append(entries[entry_string])
             continue
-        entries.add(entry)
+        # Else we process the path
         round_percent = ((i * 100) // len(all_tables_content[table_name]))
         if round_percent % 10 == 0 and round_percent != percent_reported:
             logger.info(f"Submitted {round_percent}%")
