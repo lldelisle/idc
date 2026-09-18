@@ -269,6 +269,8 @@ Other error found during inspections:
 2026-08-14 00:42:36,168 - __main__ - ERROR - Could not compute digest of /cvmfs/data.galaxyproject.org/byhand/equCab2/seq/equCab2chrM.fa: [Errno 13] Permission denied: '/cvmfs/data.galaxyproject.org/byhand/equCab2/seq/equCab2chrM.fa'
 ```
 
+Also there are duplicated entries.
+
 #### ce6
 
 `/cvmfs/data.galaxyproject.org/byhand/ce6/seq/c6.fa`
@@ -330,6 +332,14 @@ CTCTGTAAAGTCTGGGTTGTAAAAAATAATTCTTTGAAAAGAGATCCTCT
 
 Or get it back from [UCSC](https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/bigZips/ornAna1.fa.gz) but we need to check it matches the fai.
 
+Additionally the ornAna1 is present twice in the loc file:
+
+```bash
+$ grep -n ornAna1 /cvmfs/data.galaxyproject.org/byhand/location/all_fasta.loc
+200:ornAna1     ornAna1 Platypus (Ornithorhynchus anatinus): ornAna1    /cvmfs/data.galaxyproject.org/byhand/ornAna1/seq/ornAna1.fa
+201:ornAna1     ornAna1 Platypus (Ornithorhynchus anatinus): ornAna1    /cvmfs/data.galaxyproject.org/byhand/ornAna1/seq/ornAna1.fa
+```
+
 #### rn3
 
 `/cvmfs/data.galaxyproject.org/byhand/rn3/seq/rn3canon.fa` should be replaced by `/cvmfs/data.galaxyproject.org/byhand/rn3/seq/rn3.fa`
@@ -363,6 +373,36 @@ drwxr-xr-x 12 cvmfs cvmfs 4.0K Apr 22  2016 ..
 -rwxrwxr-x  1 cvmfs cvmfs 618M Apr 15  2010 equCab2.2bit
 lrwxrwxrwx  1 cvmfs cvmfs    7 May 17  2014 equCab2chrM.fa -> chrM.fa
 -rw-r--r--  1 cvmfs cvmfs 2.4G Aug 28  2009 equCab2.fa
+```
+
+#### GCF_001021295.1
+
+It is duplicated in the loc file but the name is slightly different (GCA vs GCF):
+
+```bash
+$ grep -n "GCF_001021295.1" /cvmfs/brc.galaxyproject.org/config/all_fasta.loc
+1442:GCF_001021295.1    GCF_001021295.1 Punta Toro virus (GCA_001021295.1_ViralMultiSegProj286006)      /cvmfs/brc.galaxyproject.org/data/genomes/GCF_001021295.1/seq/GCF_001021295.1.fa
+1443:GCF_001021295.1    GCF_001021295.1 Punta Toro virus (GCF_001021295.1_ViralMultiSegProj286006)      /cvmfs/brc.galaxyproject.org/data/genomes/GCF_001021295.1/seq/GCF_001021295.1.fa
+```
+
+#### GCF_014108235.1
+
+It is both in the vgp loc file and in the brc loc file.
+
+```bash
+$ grep -n "GCF_014108235.1" /cvmfs/*.galaxyproject.org/config/all_fasta.loc
+/cvmfs/brc.galaxyproject.org/config/all_fasta.loc:763:GCF_014108235.1   GCF_014108235.1 Myotis myotis (GCF_014108235.1_mMyoMyo1.p)      /cvmfs/brc.galaxyproject.org/data/genomes/GCF_014108235.1/seq/GCF_014108235.1.fa
+/cvmfs/vgp.galaxyproject.org/config/all_fasta.loc:248:GCF_014108235.1   GCF_014108235.1 Myotis myotis (GCF_014108235.1_mMyoMyo1.p)      /cvmfs/vgp.galaxyproject.org/data/genomes/GCF_014108235.1/seq/GCF_014108235.1.fa
+```
+
+#### GCF_016699485.2
+
+It is both in the vgp loc file and in the brc loc file.
+
+```bash
+$ grep -n "GCF_016699485.2" /cvmfs/*.galaxyproject.org/config/all_fasta.loc
+/cvmfs/brc.galaxyproject.org/config/all_fasta.loc:375:GCF_016699485.2   GCF_016699485.2 Gallus gallus (GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b)     /cvmfs/brc.galaxyproject.org/data/genomes/GCF_016699485.2/seq/GCF_016699485.2.fa
+/cvmfs/vgp.galaxyproject.org/config/all_fasta.loc:35:GCF_016699485.2    GCF_016699485.2 Gallus gallus (GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b)     /cvmfs/vgp.galaxyproject.org/data/genomes/GCF_016699485.2/seq/GCF_016699485.2.fa
 ```
 
 ## Ideas/TODO
