@@ -40,7 +40,7 @@ The estimated output of this step is up to 30MB for CVMFS and probably 3 to 5MB 
 tool_data_table="<first.xml> <second.xml> ..."
 output_dir=<your instance name>_$(date -I)
 # For EU
-tool_data_table="/opt/galaxy/config/tool_data_table_conf.xml <galaxy.tool_data_table_config_path>"
+tool_data_table="/opt/galaxy/config/tool_data_table_conf.xml <galaxy.shed_tool_data_table_config>"
 output_dir=usegalaxy_eu_$(date -I)
 # Or if you want to just amend to the existing DB:
 output_dir=usegalaxy_eu_2026-07-24
