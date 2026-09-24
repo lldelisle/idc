@@ -28,6 +28,12 @@ all_fasta:
   path: /cvmfs/data.galaxyproject.org/managed/seq/Amel_4.5.fa
   value: Amel_4.5
   xml_file: /cvmfs/data.galaxyproject.org/managed/location/tool_data_table_conf.xml
+- dbkey: phiX174
+  loc_file: /home/delislel/Documents/mygit/tools-iuc/data_managers/data_manager_bmtagger_index_builder/test-data/all_fasta.loc
+  name: phiX 174
+  path: ${__HERE__}/phiX174.fasta
+  value: phiX174
+  xml_file: /cvmfs/data.galaxyproject.org/managed/location/tool_data_table_conf.xml
 amrfinderplus_database:
 - loc_file: /cvmfs/data.galaxyproject.org/byhand/location/amrfinderplus.loc
   name: V3.12-2024-01-31.1

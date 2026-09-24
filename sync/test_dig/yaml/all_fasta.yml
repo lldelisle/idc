@@ -38,3 +38,23 @@ Amel_4.5:
     galaxy_name: A. mellifera Nov. 2010 (GCF_000002195.4!Amel_4.5) (Amel_4.5)
     galaxy_loc_file: '!cvmfs!data.galaxyproject.org!managed!location!all_fasta_dbkeys.loc'
     galaxy_tool_data_table_conf: '!cvmfs!data.galaxyproject.org!managed!location!tool_data_table_conf.xml'
+phiX174:
+  level_0: mVofqJ-PNURHT67R9WKgfNPjYXkVDKCF
+  level_1:
+    names: _h6b6G4U4gYwSqf1nyZThPYCXtnN42WN
+    lengths: UHirMSUYTNpbVf6zCrxIQtGQFTdAk6Hl
+    sequences: WOEMh1662l7-DcbLT-eZEOFeYSCdAGAs
+    name_length_pairs: tv6JwVPNv2Q8r61tzoe8UyLjALfg326G
+    sorted_name_length_pairs: F3XOh6ecn1GfziQ9PDQjRi23oqJhOLUd
+    sorted_sequences: WOEMh1662l7-DcbLT-eZEOFeYSCdAGAs
+  level_2_peek:
+    sequence_count: 1
+    first_name: phiX174
+    first_length: 5386
+    first_sequence: SQ.414RmJfE6fEfwXkr8RDUa_FvQrh3H5Vb
+  aliases:
+    galaxy_unique_build_id: phiX174
+    galaxy_dbkey: phiX174
+    galaxy_name: phiX 174
+    galaxy_loc_file: '!home!delislel!Documents!mygit!tools-iuc!data_managers!data_manager_bmtagger_index_builder!test-data!all_fasta.loc'
+    galaxy_tool_data_table_conf: '!cvmfs!data.galaxyproject.org!managed!location!tool_data_table_conf.xml'

@@ -97,6 +97,10 @@ def import_fasta_all(
     for i, fasta_record in enumerate(fasta_all):
         unique_build_id = fasta_record.value
 
+        if fasta_record.path.startswith("${__HERE__}"):
+            loc_file_dir = os.path.dirname(fasta_record.loc_file)
+            fasta_record.path = fasta_record.path.replace("${__HERE__}", loc_file_dir)
+
         cvmfs_fasta_path = cvmfs_mount_prefix / Path(fasta_record.path).relative_to(
             cvmfs_mount_prefix.anchor
         )
