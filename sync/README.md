@@ -405,6 +405,100 @@ $ grep -n "GCF_016699485.2" /cvmfs/*.galaxyproject.org/config/all_fasta.loc
 /cvmfs/vgp.galaxyproject.org/config/all_fasta.loc:35:GCF_016699485.2    GCF_016699485.2 Gallus gallus (GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b)     /cvmfs/vgp.galaxyproject.org/data/genomes/GCF_016699485.2/seq/GCF_016699485.2.fa
 ```
 
+### amrfinderplus-db
+
+There is an issue with a symbolic link which raised the error "[Errno 40] Too many levels
+of symbolic links: '/cvmfs/data.galaxyproject.org/byhand/amrfinderplus-db/amrfinderplus_V3.11_2022-12-19.1/amrfinderplus_V3.11_2022-12-19.1'":
+
+```bash
+$ ls -alh /cvmfs/data.galaxyproject.org/byhand/amrfinderplus-db/amrfinderplus_V3.11_2022-12-19.1/amrfinderplus_V3.11_2022-12-19.1
+lrwxrwxrwx 1 cvmfs cvmfs 35 Jan 11  2023 /cvmfs/data.galaxyproject.org/byhand/amrfinderplus-db/amrfinderplus_V3.11_2022-12-19.1/amrfinderplus_V3.11_2022-12-19.1 -> ./amrfinderplus_V3.11_2022-12-19.1/
+```
+
+### bfast index
+
+It seems that the directories do not exists.
+
+### bowtie2 index
+
+I don't think this could prevent galaxy using it but we identified 2 files with restricted rights that seems to be the logs of the index generation:
+
+```bash
+$ ls -alh /cvmfs/data.galaxyproject.org/byhand/hg38/hg38full/bowtie2_index/nohup.out
+-rw------- 1 cvmfs cvmfs 13K Mar 18  2014 /cvmfs/data.galaxyproject.org/byhand/hg38/hg38full/bowtie2_index/nohup.out
+$ ls -alh /cvmfs/data.galaxyproject.org/byhand/calJac3/calJac3full/bowtie2_index/20130311_calJac3full_bt2
+-rw------- 1 cvmfs cvmfs 12K Mar 11  2013 /cvmfs/data.galaxyproject.org/byhand/calJac3/calJac3full/bowtie2_index/20130311_calJac3full_bt2
+```
+
+### bowtie index
+
+I don't think this could prevent galaxy using it but we identified a file with restricted rights that seems to be the logs of the index generation:
+
+```bash
+$ ls -alh /cvmfs/data.galaxyproject.org/byhand/hg38/hg38full/bowtie_index/nohup.out
+-rw------- 1 cvmfs cvmfs 13K Mar 18  2014 /cvmfs/data.galaxyproject.org/byhand/hg38/hg38full/bowtie_index/nohup.out
+```
+
+Another file with restricted permissions:
+```bash
+$ ls -alh /cvmfs/data.galaxyproject.org/byhand/micMur1/bowtie_index/
+total 1.9G
+drwxrwxr-x 3 cvmfs cvmfs 4.0K Mar 11  2013 .
+drwxr-xr-x 9 cvmfs cvmfs 4.0K Apr 22  2016 ..
+-rw------- 1 cvmfs cvmfs    0 Mar 11  2013 .__afs2112
+drwxrwxr-x 2 cvmfs cvmfs 4.0K Nov 20  2012 cs
+-rw-rw-r-- 1 cvmfs cvmfs 520M Nov 20  2012 micMur1.1.ebwt
+-rw-rw-r-- 1 cvmfs cvmfs 221M Nov 20  2012 micMur1.2.ebwt
+-rw-rw-r-- 1 cvmfs cvmfs 5.8M Nov 20  2012 micMur1.3.ebwt
+-rw-rw-r-- 1 cvmfs cvmfs 442M Nov 20  2012 micMur1.4.ebwt
+lrwxrwxrwx 1 cvmfs cvmfs   17 May 17  2014 micMur1.fa -> ../seq/micMur1.fa
+-rw-rw-r-- 1 cvmfs cvmfs 520M Nov 20  2012 micMur1.rev.1.ebwt
+-rw-rw-r-- 1 cvmfs cvmfs 221M Nov 20  2012 micMur1.rev.2.ebwt
+```
+
+
+#### equCab2chrM
+
+There is an issue with the access rights for files that needed to run bowtie:
+
+```bash
+$ ls -alh /cvmfs/data.galaxyproject.org/byhand/equCab2/bowtie_index/
+total 2.5G
+drwxr-sr-x  3 cvmfs cvmfs 4.0K Oct 20  2010 .
+drwxr-xr-x 12 cvmfs cvmfs 4.0K Apr 22  2016 ..
+-rw-------  1 cvmfs cvmfs 4.1M Aug 31  2010 chrM.1.ebwt
+-rw-------  1 cvmfs cvmfs 2.1K Aug 31  2010 chrM.2.ebwt
+-rw-------  1 cvmfs cvmfs   17 Aug 31  2010 chrM.3.ebwt
+-rw-------  1 cvmfs cvmfs 4.1K Aug 31  2010 chrM.4.ebwt
+lrwxrwxrwx  1 cvmfs cvmfs   14 May 17  2014 chrM.fa -> ../seq/chrM.fa
+-rw-------  1 cvmfs cvmfs 4.1M Aug 31  2010 chrM.rev.1.ebwt
+-rw-------  1 cvmfs cvmfs 2.1K Aug 31  2010 chrM.rev.2.ebwt
+drwxr-xr-x  2 cvmfs cvmfs 4.0K Feb 17  2011 cs
+-rw-r--r--  1 cvmfs cvmfs 667M Sep 14  2009 equCab2.1.ebwt
+-rw-r--r--  1 cvmfs cvmfs 290M Sep 14  2009 equCab2.2.ebwt
+-rw-r--r--  1 cvmfs cvmfs 487K Sep 14  2009 equCab2.3.ebwt
+-rw-r--r--  1 cvmfs cvmfs 580M Sep 14  2009 equCab2.4.ebwt
+lrwxrwxrwx  1 cvmfs cvmfs   11 May 17  2014 equCab2chrM.1.ebwt -> chrM.1.ebwt
+lrwxrwxrwx  1 cvmfs cvmfs   11 May 17  2014 equCab2chrM.2.ebwt -> chrM.2.ebwt
+lrwxrwxrwx  1 cvmfs cvmfs   11 May 17  2014 equCab2chrM.3.ebwt -> chrM.3.ebwt
+lrwxrwxrwx  1 cvmfs cvmfs   11 May 17  2014 equCab2chrM.4.ebwt -> chrM.4.ebwt
+lrwxrwxrwx  1 cvmfs cvmfs   21 May 17  2014 equCab2chrM.fa -> ../seq/equCab2chrM.fa
+lrwxrwxrwx  1 cvmfs cvmfs   15 May 17  2014 equCab2chrM.rev.1.ebwt -> chrM.rev.1.ebwt
+lrwxrwxrwx  1 cvmfs cvmfs   15 May 17  2014 equCab2chrM.rev.2.ebwt -> chrM.rev.2.ebwt
+lrwxrwxrwx  1 cvmfs cvmfs   17 May 17  2014 equCab2.fa -> ../seq/equCab2.fa
+-rw-r--r--  1 cvmfs cvmfs 667M Sep 14  2009 equCab2.rev.1.ebwt
+-rw-r--r--  1 cvmfs cvmfs 290M Sep 14  2009 equCab2.rev.2.ebwt
+```
+
+#### ornAna1
+
+Still the same issue with the fa:
+
+```bash
+$ ls -alh /cvmfs/data.galaxyproject.org/byhand/ornAna1/bowtie_index/cs/ornAna1.fa
+lrwxrwxrwx 1 cvmfs cvmfs 20 May 17  2014 /cvmfs/data.galaxyproject.org/byhand/ornAna1/bowtie_index/cs/ornAna1.fa -> ../../seq/ornAna1.fa
+```
+
 ## Ideas/TODO
 
 Keep in mind that the data_manager are run while we are working.
